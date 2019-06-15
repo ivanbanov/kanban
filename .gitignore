@@ -1,0 +1,7 @@
+# OS
+*.log
+.DS_Store
+
+# FOLDERS
+dist
+node_modules
