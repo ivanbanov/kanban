@@ -16,12 +16,16 @@ const KanbanContainer = ({
   deleteTask,
   updateTask,
   searchTask,
+  searchText,
 }) => (
   <Styled>
     <Header>
       <span>
         <strong>Search</strong>{' '}
-        <input onInput={(event) => searchTask(event.target.value)} />
+        <input
+          onInput={(event) => searchTask(event.target.value)}
+          defaultValue={searchText}
+        />
       </span>
       {lastUpdate && (
         <span>
@@ -47,6 +51,7 @@ const KanbanContainer = ({
 
 KanbanContainer.defaultProps = {
   lastUpdate: null,
+  searchText: null,
 };
 
 KanbanContainer.propTypes = {
@@ -56,6 +61,7 @@ KanbanContainer.propTypes = {
   deleteTask: PropTypes.func.isRequired,
   updateTask: PropTypes.func.isRequired,
   searchTask: PropTypes.func.isRequired,
+  searchText: PropTypes.string,
 };
 
 const mapStateToProps = ({ kanban }) => ({

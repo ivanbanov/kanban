@@ -9,7 +9,7 @@ export const tasksForSearch = (state) => {
     const parsedText = JSON.stringify(state.get('search')).slice(1, -1);
     const withoutAccents = removeAccents(parsedText);
     const regExp = new RegExp(withoutAccents, 'i');
-    return regExp.test(task.get('text'));
+    return regExp.test(removeAccents(task.get('text')));
   });
 };
 

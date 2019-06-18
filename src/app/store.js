@@ -5,12 +5,10 @@ import immutableTransform from 'redux-persist-transform-immutable';
 
 import { reducer } from './redux';
 
-const { initialState } = reducer;
-
 const persistedReducer = persistReducer(
   {
     transforms: [immutableTransform()],
-    key: 'root',
+    key: 'kanban',
     storage,
   },
   combineReducers({ kanban: reducer }),
@@ -18,7 +16,7 @@ const persistedReducer = persistReducer(
 
 const store = createStore(
   persistedReducer,
-  initialState,
+  {},
   /* eslint-disable no-underscore-dangle */
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
