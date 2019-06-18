@@ -8,8 +8,11 @@ module.exports = {
   parser: 'babel-eslint',
   extends: ['airbnb', 'prettier', 'prettier/react'],
   rules: {
+    'arrow-parens': ['error', 'always'],
     'import/extensions': ['.js', '.jsx', '.json', '.svg'],
     'import/no-extraneous-dependencies': ['error', { ignore: ['webpack/'] }],
+    'import/prefer-default-export': 'off',
+    'no-return-assign': 'off',
     'prettier/prettier': 'error',
   },
   plugins: ['prettier', 'react-hooks'],

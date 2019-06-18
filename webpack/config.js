@@ -10,7 +10,7 @@ module.exports = {
   entry: [
     '@babel/polyfill',
     'react-hot-loader/patch',
-    path.join(paths.src, '/app/main.jsx'),
+    path.join(paths.src, '/app/index.jsx'),
   ],
   output: {
     path: paths.dist,
@@ -26,6 +26,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      'react-dom': '@hot-loader/react-dom',
       ui: path.join(paths.src, 'ui'),
       app: path.join(paths.src, 'app'),
     },
@@ -60,7 +61,6 @@ module.exports = {
       },
     ],
   },
-
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
