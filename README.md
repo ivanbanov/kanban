@@ -4,6 +4,8 @@ Project based on React/Redux architeture and Webpack for bundling.
 
 ## Demo
 
+![](./example.gif)
+
 ## Try it out
 
 1. Clone this project
@@ -34,4 +36,3 @@ Then access [http://localhost:8080/](http://localhost:8080/)
 - Search for tasks
 - [StyledComponents](https://www.styled-components.com/) to handle the UI
 - [ReduxActions](https://redux-actions.js.org/) to handle action creators
-
