@@ -34,5 +34,6 @@ Then access [http://localhost:8080/](http://localhost:8080/)
 - Task box with autosize
 - Persistent data
 - Search for tasks
+- [ImmutableJS](https://immutable-js.github.io/immutable-js/) to handle immutability
 - [StyledComponents](https://www.styled-components.com/) to handle the UI
 - [ReduxActions](https://redux-actions.js.org/) to handle action creators
