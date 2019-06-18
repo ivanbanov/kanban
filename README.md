@@ -32,8 +32,11 @@ Then access [http://localhost:8080/](http://localhost:8080/)
 
 - Drag and drop for tasks
 - Task box with autosize
-- Persistent data
 - Search for tasks
+- Keyboard event
+  - Enter: Create new task
+  - Esc: Cancel
+- [ReduxPersist](https://github.com/rt2zz/redux-persist) to handle persistent data
 - [ImmutableJS](https://immutable-js.github.io/immutable-js/) to handle immutability
 - [StyledComponents](https://www.styled-components.com/) to handle the UI
 - [ReduxActions](https://redux-actions.js.org/) to handle action creators
