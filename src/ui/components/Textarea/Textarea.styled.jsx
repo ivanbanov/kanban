@@ -1,5 +1,5 @@
-import { colors } from 'ui/Styles';
-import styled from 'styled-components';
+import { colors } from 'ui/Styles'
+import styled from 'styled-components'
 
 export default styled.textarea`
   display: block;
@@ -11,4 +11,4 @@ export default styled.textarea`
   &:focus {
     border-color: ${colors.blue};
   }
-`;
+`

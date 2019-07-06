@@ -1,48 +1,48 @@
-import React, { useState, useRef } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useRef } from 'react'
+import PropTypes from 'prop-types'
 
-import Styled from './DropZone.styled';
+import Styled from './DropZone.styled'
 
 const DropZone = ({ children, onDragOver, onDrop, ...rest }) => {
-  const [isActive, setIsActive] = useState(false);
-  const dropZone = useRef(null);
+  const [isActive, setIsActive] = useState(false)
+  const dropZone = useRef(null)
 
-  let dragCounter = 0;
+  let dragCounter = 0
 
   return (
     <Styled
       {...rest}
       ref={dropZone}
       onDragEnter={() => {
-        dragCounter += 1;
-        setIsActive(true);
+        dragCounter += 1
+        setIsActive(true)
       }}
       onDragLeave={() => {
-        dragCounter -= 1;
+        dragCounter -= 1
         if (dragCounter < 0) {
-          setIsActive(false);
+          setIsActive(false)
         }
       }}
       onDragOver={(event) => {
-        event.preventDefault();
-        onDragOver(event);
+        event.preventDefault()
+        onDragOver(event)
       }}
       onDrop={(event) => {
-        onDrop(event);
-        setIsActive(false);
+        onDrop(event)
+        setIsActive(false)
       }}
       isActive={isActive}
     >
       {children}
     </Styled>
-  );
-};
+  )
+}
 
 DropZone.defaultProps = {
   children: null,
   onDragOver: () => null,
   onDrop: () => null,
-};
+}
 
 DropZone.propTypes = {
   children: PropTypes.oneOfType([
@@ -51,6 +51,6 @@ DropZone.propTypes = {
   ]),
   onDragOver: PropTypes.func,
   onDrop: PropTypes.func,
-};
+}
 
-export default DropZone;
+export default DropZone

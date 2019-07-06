@@ -1,5 +1,5 @@
 module.exports = (api) => {
-  api.cache(true);
+  api.cache(true)
 
   return {
     presets: [
@@ -18,5 +18,5 @@ module.exports = (api) => {
       '@babel/plugin-proposal-class-properties',
       'react-hot-loader/babel',
     ],
-  };
-};
+  }
+}

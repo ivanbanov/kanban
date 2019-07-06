@@ -1,5 +1,5 @@
-import { normalize } from 'styled-normalize';
-import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize'
+import { createGlobalStyle } from 'styled-components'
 
 export const colors = {
   blue: '#3af',
@@ -9,7 +9,7 @@ export const colors = {
   grey: '#ccc',
   darkGrey: '#777',
   black: '#000',
-};
+}
 
 export default createGlobalStyle`
   ${normalize}
@@ -45,4 +45,4 @@ export default createGlobalStyle`
     height: 1em;
     display: inline-flex;
   }
-`;
+`

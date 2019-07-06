@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Immutable from 'immutable';
-import { connect } from 'react-redux';
-import { format } from 'date-fns';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Immutable from 'immutable'
+import { connect } from 'react-redux'
+import { format } from 'date-fns'
 
-import Styled, { Header, Kanban } from './KanbanContainer.styled';
-import KanbanSection from '../components/KanbanSection';
-import { actions, selectors } from '../redux';
-import { TASK_STATUS } from '../constants';
+import Styled, { Header, Kanban } from './KanbanContainer.styled'
+import KanbanSection from '../components/KanbanSection'
+import { actions, selectors } from '../redux'
+import { TASK_STATUS } from '../constants'
 
 const KanbanContainer = ({
   tasksByStatus,
@@ -47,12 +47,12 @@ const KanbanContainer = ({
       ))}
     </Kanban>
   </Styled>
-);
+)
 
 KanbanContainer.defaultProps = {
   lastUpdate: null,
   searchText: null,
-};
+}
 
 KanbanContainer.propTypes = {
   tasksByStatus: PropTypes.instanceOf(Immutable.OrderedMap).isRequired,
@@ -62,22 +62,22 @@ KanbanContainer.propTypes = {
   updateTask: PropTypes.func.isRequired,
   searchTask: PropTypes.func.isRequired,
   searchText: PropTypes.string,
-};
+}
 
 const mapStateToProps = ({ kanban }) => ({
   tasksByStatus: selectors.tasksByStatus(kanban),
   lastUpdate: kanban.get('lastUpdate'),
   searchText: kanban.get('search'),
-});
+})
 
 const mapDispatchToProps = {
   createTask: actions.task.create,
   deleteTask: actions.task.delete,
   updateTask: actions.task.update,
   searchTask: actions.search,
-};
+}
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(KanbanContainer);
+)(KanbanContainer)

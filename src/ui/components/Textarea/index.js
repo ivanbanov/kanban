@@ -1,4 +1,4 @@
-import TextareaStyled from './Textarea.styled';
+import TextareaStyled from './Textarea.styled'
 
-export { TextareaStyled };
-export default TextareaStyled;
+export { TextareaStyled }
+export default TextareaStyled

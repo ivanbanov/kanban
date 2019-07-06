@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   root: true,
   env: {
@@ -13,12 +15,22 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { ignore: ['webpack/'] }],
     'import/prefer-default-export': 'off',
     'no-return-assign': 'off',
-    'prettier/prettier': 'error',
+    'prettier/prettier': ['error', {
+      "arrowParens": "always",
+      "printWidth": 80,
+      "singleQuote": true,
+      "tabWidth": 2,
+      "trailingComma": "all",
+      "semi": false
+    }],
   },
   plugins: ['prettier', 'react-hooks'],
   settings: {
     'import/resolver': {
-      node: { paths: ['src'] },
+      webpack: {
+        config: path.join(__dirname, '/webpack/config.js'),
+      },
     },
   },
 };
+

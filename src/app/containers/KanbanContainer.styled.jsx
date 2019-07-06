@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { colors } from 'ui/Styles';
+import styled from 'styled-components'
+import { colors } from 'ui/Styles'
 
 export const Header = styled.div`
   padding: 1rem;
@@ -11,7 +11,7 @@ export const Header = styled.div`
   h2 {
     margin: 0;
   }
-`;
+`
 
 export const Kanban = styled.div`
   display: flex;
@@ -26,10 +26,10 @@ export const Kanban = styled.div`
       border-left: 0;
     }
   }
-`;
+`
 
 export default styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-`;
+`

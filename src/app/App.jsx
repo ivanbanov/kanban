@@ -1,17 +1,17 @@
 // HMR
-import { hot } from 'react-hot-loader/root';
-import { setConfig } from 'react-hot-loader';
+import { hot } from 'react-hot-loader/root'
+import { setConfig } from 'react-hot-loader'
 
 // App
-import React from 'react';
-import Styles from 'ui/Styles';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
+import React from 'react'
+import Styles from 'ui/Styles'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
 
-import KanbanContainer from './containers/KanbanContainer';
-import store, { persistor } from './store';
+import KanbanContainer from './containers/KanbanContainer'
+import store, { persistor } from './store'
 
-setConfig();
+setConfig()
 
 const App = () => (
   <React.Fragment>
@@ -22,6 +22,6 @@ const App = () => (
       </PersistGate>
     </Provider>
   </React.Fragment>
-);
+)
 
-export default hot(App);
+export default hot(App)

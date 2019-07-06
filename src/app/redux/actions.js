@@ -1,4 +1,4 @@
-import { createActions } from 'redux-actions';
+import { createActions } from 'redux-actions'
 
 const actions = createActions({
   search: null,
@@ -7,6 +7,6 @@ const actions = createActions({
     DELETE: null,
     UPDATE: null,
   },
-});
+})
 
-export default actions;
+export default actions

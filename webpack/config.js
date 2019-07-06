@@ -1,8 +1,8 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const { paths, publicPath } = require('./paths');
+const { paths, publicPath } = require('./paths')
 
 module.exports = {
   mode: 'development',
@@ -67,4 +67,4 @@ module.exports = {
       template: path.join(paths.src, '/app/index.html'),
     }),
   ],
-};
+}

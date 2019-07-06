@@ -1,6 +1,6 @@
-import { colors } from 'ui/Styles';
-import { TextareaStyled } from 'ui/components/Textarea';
-import styled from 'styled-components';
+import { colors } from 'ui/Styles'
+import { TextareaStyled } from 'ui/components/Textarea'
+import styled from 'styled-components'
 
 export default styled.div`
   background-color: ${colors.white};
@@ -12,7 +12,6 @@ export default styled.div`
   color: ${(props) => (props.isActive ? 'transparent' : colors.darkGrey)};
   position: relative;
   min-height: 2.25rem;
-  max-height: 200px;
 
   &[draggable] {
     cursor: pointer;
@@ -43,4 +42,4 @@ export default styled.div`
       fill: ${colors.red};
     }
   }
-`;
+`

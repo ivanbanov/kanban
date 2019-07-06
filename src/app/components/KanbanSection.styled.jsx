@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { colors } from 'ui/Styles';
+import styled from 'styled-components'
+import { colors } from 'ui/Styles'
 
-import { TaskStyled } from 'ui/components/Task';
-import { DropZoneStyled } from 'ui/components/DropZone';
+import { TaskStyled } from 'ui/components/Task'
+import { DropZoneStyled } from 'ui/components/DropZone'
 
 export const TaskTitle = styled.div`
   font-weight: bold;
@@ -23,13 +23,13 @@ export const TaskTitle = styled.div`
       transform: scale(1.2);
     }
   }
-`;
+`
 
 export const TaskContainer = styled.div`
   height: 100%;
   padding: 0.5rem 1rem;
   overflow-y: auto;
-`;
+`
 
 export default styled.div`
   ${DropZoneStyled} {
@@ -41,4 +41,4 @@ export default styled.div`
   ${TaskStyled} {
     margin-top: 0.5rem;
   }
-`;
+`

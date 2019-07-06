@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useRef, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
-import Textarea from 'ui/components/Textarea';
-import CancelIcon from 'ui/assets/images/cancel.svg';
-import Styled from './Task.styled';
+import Textarea from 'ui/components/Textarea'
+import CancelIcon from 'ui/assets/images/cancel.svg'
+import Styled from './Task.styled'
 
 const Task = ({
   text,
@@ -16,16 +16,16 @@ const Task = ({
   onDelete,
   ...rest
 }) => {
-  const textarea = useRef(null);
-  const [isActiveState, setIsActive] = useState(isActive);
+  const textarea = useRef(null)
+  const [isActiveState, setIsActive] = useState(isActive)
 
-  useEffect(() => textarea.current.focus());
+  useEffect(() => textarea.current.focus())
 
   return (
     <Styled
       {...rest}
       onDoubleClick={() => {
-        setIsActive(true);
+        setIsActive(true)
       }}
       isActive={isActiveState}
       deletable
@@ -34,30 +34,30 @@ const Task = ({
       <Textarea
         ref={textarea}
         onBlur={(event) => {
-          onBlur(event);
-          setIsActive(false);
+          onBlur(event)
+          setIsActive(false)
         }}
         onChange={onChange}
         onKeyDown={(event) => {
           if (event.key === 'Enter' || event.key === 'Escape') {
-            event.preventDefault();
+            event.preventDefault()
           }
         }}
         onKeyUp={(event) => {
           if (event.key === 'Enter') {
-            onEnter(event);
+            onEnter(event)
           }
 
           if (event.key === 'Escape') {
-            onEscape(event);
+            onEscape(event)
           }
         }}
         value={text}
       />
       {deletable && <CancelIcon onClick={() => onDelete()} />}
     </Styled>
-  );
-};
+  )
+}
 
 Task.defaultProps = {
   text: '',
@@ -67,7 +67,7 @@ Task.defaultProps = {
   onEnter: () => null,
   onEscape: () => null,
   onDelete: () => null,
-};
+}
 
 Task.propTypes = {
   text: PropTypes.string,
@@ -78,6 +78,6 @@ Task.propTypes = {
   isActive: PropTypes.bool,
   deletable: PropTypes.bool,
   onDelete: PropTypes.func,
-};
+}
 
-export default Task;
+export default Task
